@@ -1,23 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vanilla App Template</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-  </head>
-  <body>
-    <load src="./partials/header.html" icon-path="img/sprite.svg#logo" />
 
-    <main>
-      <!-- Loads the specified .html file -->
-      <load src="./partials/vite-promo.html" />
-      <load src="./partials/badges.html" />
-    </main>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Search App</title>
 
-    <load src="./partials/footer.html" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/css/iziToast.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.css" />
+</head>
 
-    <script type="module" src="./main.js"></script>
-  </body>
+<body>
+  <div class="container">
+    <form id="search-form">
+      <input type="text" name="query" placeholder="Search images..." />
+      <button class="search-btn" type="submit">Search</button>
+    </form>
+    <div id="search-loader" class="loader hidden"></div>
+
+    <div class="gallery"></div>
+
+    <button class="load-more hidden">Load more</button>
+    <div id="load-more-loader" class="loader-more hidden"></div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/izitoast/1.4.0/js/iziToast.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/simplelightbox/2.10.3/simple-lightbox.min.js"></script>
+
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
